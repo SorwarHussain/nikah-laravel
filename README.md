@@ -38,7 +38,7 @@ This Nikah project is a web application designed to help users create, update, a
 
 ### User Dashboard
 - Only verified users can access their personal dashboard for managing profiles and other settings.
-- 
+
 ## How to install
 
 ```
