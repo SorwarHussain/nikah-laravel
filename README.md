@@ -5,7 +5,7 @@
 ## Overview
 This Nikah project is a web application designed to help users create, update, and manage profiles for matrimonial purposes. It includes features such as user authentication, profile management, search functionality, and an admin dashboard for managing users and donations.
 
-## Features Implementations:
+## Features Implementation:
 
 ### Authentication System
 - Users can register, log in, and log out.
