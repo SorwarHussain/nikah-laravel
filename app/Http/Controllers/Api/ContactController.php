@@ -28,7 +28,7 @@ class ContactController extends Controller
             'subject'=>$request->subject,
             'message' => $request->message,
         ];
-        $adminEmail="nusratjahansalina999@gmail.com";
+        $adminEmail="sorwarsust98@gmail.com";
         Mail::to($adminEmail)->send(new ContactMail($details));
 
         return response()->json([

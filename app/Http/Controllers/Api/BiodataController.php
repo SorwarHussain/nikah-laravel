@@ -8,7 +8,12 @@ use Illuminate\Http\Request;
 
 class BiodataController extends Controller
 {
-    public function showBiodatas() {
+    public function showBiodatasAdmin() {
+        $profiles = Profile::all();
+        return response()->json($profiles);
+    }
+
+    public function showBiodata() {
         $profiles = Profile::all()->where('is_approved', true);
         return response()->json($profiles);
     }

@@ -24,7 +24,7 @@ class VerifyEmailController extends Controller
                 'email_verified_at' => now(),
             ])->save();
         }
-        dd($request->user());
+       // dd($request->user());
         return response()->json([
             'message' => 'Email verified',
         ]);

@@ -21,9 +21,13 @@ class EmailVerification extends Mailable
      */
     public function __construct($user)
     {
-       // dd($user);
+        //dd($user);
         $generate = URL::temporarySignedRoute('verify-email', now()->addMinutes(30), ['email' => $user->email]);
+        //dd($generate);
         $this->url = str_replace(env('APP_URL'), env('FRONTEND_URL'), $generate);
+        //$this->url = $generate;
+        //dd($this->url);
+        //dd($generate);
     }
 
     /**

@@ -62,8 +62,6 @@ class ProfileRequest extends FormRequest
             'motherOccupation' => 'required|string',
             'brotherNum' => 'required|string',
             'sisterNum' => 'required|string',
-            'brotherDetails' => 'string',
-            'sisterDetails' => 'string',
             'uncle' => 'required|string',
             'familyStatus' => 'required|string',
             'familyDeen' => 'required|string',

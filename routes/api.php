@@ -32,7 +32,7 @@ Route::get('dashboard', DashboardController::class);
 Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.form');
 Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 //sadakah
-//Route::get('/sadakah', [ContactController::class, 'showForm'])->name('contact.form');
+
 Route::get('/sadakah', [SadakahController::class,'showAllSadakah'])->middleware(['auth:sanctum', 'verified','admin']);
 Route::post('/sadakah', [SadakahController::class,'submitSadakahForm']);
 Route::get('/sadakah/{id}', [SadakahController::class, 'detailsSadakah'])->middleware(['auth:sanctum', 'verified','admin']);
@@ -41,7 +41,8 @@ Route::get('/profile/{id?}',[ProfileController::class,'showProfile'])->name('pro
 Route::post('/profile',[ProfileController::class,'createProfile'])->name('profile.create');
 Route::put('/profile/{id}', [ProfileController::class, 'updateProfile']);
 //biodata
-Route::get('/biodata',[BiodataController::class,'showBiodatas'])->name('biodata.show');
+Route::get('/admin/biodata',[BiodataController::class,'showBiodatasAdmin'])->middleware(['auth:sanctum', 'verified','admin']);
+Route::get('/biodata',[BiodataController::class,'showBiodata'])->name('biodata.show');
 Route::get('/biodata/{id}', [BiodataController::class, 'detailsBiodata']);
 //added to wishlist
 Route::get('/wishlist', [WishlistController::class, 'getWishlist']);
